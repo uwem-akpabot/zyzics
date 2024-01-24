@@ -88,8 +88,12 @@ h1.subheader{
 }
  */
 
+#banner .btn{
+    margin: 0 0 .8em 0;
+}
+
 .btn{
-    margin: .9rem 0;
+    margin: .8rem 0;
     padding: .4rem 1.2rem;
     background: var(--complimentary-color);
     color: var(--text-color);
@@ -97,6 +101,14 @@ h1.subheader{
     font-size: var(----medium-size);
     border-radius: 30px;  
     background-image: linear-gradient(to bottom, #66f, #1D2674, #1D2674, #1D2674); 
+    background-color: #1D2674;
+    border-color: #bbd; 
+    text-transform: capitalize;
+}
+
+.btn:hover{
+    background: var(--complimentary-color);
+    background-image: linear-gradient(to top, #03a, #1D2674, #1D2674, #1D2674); 
     background-color: #1D2674;
     border-color: #bbd; 
 }
