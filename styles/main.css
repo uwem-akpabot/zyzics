@@ -13,7 +13,7 @@
     --primary-color: #ec2027;
     --secondary-color: #fff;
     --tertiary-color: #212121;
-    --complimentary-color: #000;
+    --complimentary-color: #1D2674;
     --background-color: #000;
     --text-color: #eee;
     --light-text: #aaa;
@@ -88,6 +88,19 @@ h1.subheader{
 }
  */
 
+.btn{
+    margin: .9rem 0;
+    padding: .4rem 1.2rem;
+    background: var(--complimentary-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(----medium-size);
+    border-radius: 30px;  
+    background-image: linear-gradient(to bottom, #66f, #1D2674, #1D2674, #1D2674); 
+    background-color: #1D2674;
+    border-color: #bbd; 
+}
+
 p{ font-family: var(--body-font); font-size: 1.18rem; line-height:1.6; }
 
 .nopadleft{ padding-left:0 }
@@ -136,6 +149,7 @@ body{
 #explainer__image{
     width:100%;
 }
+
 
 /* ######################################################## */
 
