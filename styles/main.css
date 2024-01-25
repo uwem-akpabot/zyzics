@@ -3,27 +3,34 @@
     src: url(../fonts/Garnett/Garnett-Regular.ttf); 
 }
 @font-face {
-    font-family: VulfSans-Regular;
-    src: url(../fonts/VulfSans/VulfSans-Regular.ttf); 
+    font-family: Inter-Regular;
+    src: url(../fonts/Inter/Inter-Regular.ttf); 
 }
 
 /* VARIABLES */
 :root{
     /* Colors */
     --primary-color: #ec2027;
-    --secondary-color: #fff;
+    --color-2: #8dec20;
+    --color-3: #20ece5;
+    --color-4: #7F20EC;
+    --secondary-color: #fff; 
     --tertiary-color: #212121;
     --complimentary-color: #1D2674;
     --background-color: #000;
     --text-color: #eee;
-    --light-text: #aaa;
+    --light-text: #ccc;
     /* --first-clr: hsl(292, 96%, 44%);
     --second-clr: hsl(331, 90%, 61%);
     --third-clr: hsl(248, 70%, 50%); */
 
     /* Fonts */
     --title-font: Garnett-Regular;
-    --body-font: VulfSans-Regular;
+    --body-font: Inter-Regular;
+
+    --medium-size: 1rem;
+    --small-size: .8rem;
+    --btn-size: .9rem;
 
     --bold-weight: 1.05rem;
     --semibold-weight: 1.05rem;
@@ -34,8 +41,6 @@
     --xlarge-size: 4rem;
     --large-size: 4rem;
     --semilarge-size: 4rem;
-    --medium-size: 1rem;
-    --small-size: 4rem;
     --smaller-size: 4rem;
     --smallest-size: 4rem;
 }
@@ -88,40 +93,44 @@ h1.subheader{
 }
  */
 
-#banner .btn{
-    margin: 0 0 .8em 0;
-}
-
 .btn{
-    margin: .8rem 0;
-    padding: .4rem 1.2rem;
-    background: var(--complimentary-color);
+    /* margin: .6rem 0; */
+    padding: .6rem 1.3rem;
     color: var(--text-color);
     font-family: var(--body-font);
-    font-size: var(----medium-size);
-    border-radius: 30px;  
-    background-image: linear-gradient(to bottom, #66f, #1D2674, #1D2674, #1D2674); 
-    background-color: #1D2674;
+    font-size: var(--btn-size);
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* background-image: linear-gradient(to bottom, #66f, #1D2674, #1D2674, #1D2674);  */
+    /* border: 2px solid #bbd;  */
+    /* border */
+    background: var(--complimentary-color);
+    background-image: linear-gradient(to top, #404, var(--color-4), var(--color-4)); 
     border-color: #bbd; 
-    text-transform: capitalize;
 }
 
 .btn:hover{
     background: var(--complimentary-color);
-    background-image: linear-gradient(to top, #03a, #1D2674, #1D2674, #1D2674); 
-    background-color: #1D2674;
+    background: var(--color-4);
     border-color: #bbd; 
+}
+
+#banner .btn{
+    margin: .6rem 0 0 0 !important;
 }
 
 p{ font-family: var(--body-font); font-size: 1.18rem; line-height:1.6; }
 
 .nopadleft{ padding-left:0 }
 .mt-2{ margin-top: 2rem; }
+.my-1{ margin: 1rem 0; }
 .text-right{ text-align: right; }
 
 .light-text{
     padding:0 !important; margin: 0 !important; font-size: 15px; color: var(--light-text);
 }
+
 /* NAVIGATION */
 .company__logo .nav__logo{ 
     color: var(--light-text); 
@@ -149,13 +158,22 @@ body{
     padding-top: 1.8rem;
 }
 
-.grid32{
+
+.grid32, .grid33{
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
-    gap: 1rem;
-    grid-template-columns: 3fr 2fr;
+    gap: 0 1rem;
+    /* grid-template-columns: 3fr 2fr; */
     /* grid-template-columns: auto auto auto; */
     /* grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
+}
+
+.grid32{
+    grid-template-columns: 3fr 2fr;
+}
+.grid33{
+    grid-template-columns: 3fr 3fr;
+    gap: 0 6rem;
 }
 
 #explainer__image{
